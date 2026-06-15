@@ -14,7 +14,8 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/chinmayiii/test.git'
+                git branch: 'main',
+                    url: 'https://github.com/chinmayiii/test.git'
             }
         }
 
@@ -32,7 +33,7 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                sh 'Ansible-playbook Ansible/playbook.yml -i Ansible/hosts.ini'
+                sh 'ansible-playbook ansible/playbook.yml -i ansible/hosts.ini'
             }
         }
 
