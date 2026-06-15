@@ -32,7 +32,7 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                sh 'ansible-playbook ansible/playbook.yml -i ansible/hosts.ini'
+                sh 'Ansible-playbook Ansible/playbook.yml -i Ansible/hosts.ini'
             }
         }
 
